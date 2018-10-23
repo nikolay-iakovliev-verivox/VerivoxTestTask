@@ -1,0 +1,8 @@
+<div class="filter-panel">
+  <app-tarif-filter-panel [value]="sortField" [filters]="filters" (changeSort)="changeSortField($event)" (changeDirection)="changeDirection()"></app-tarif-filter-panel>
+</div>
+<ul class="tarif-items">
+  <li class="tarif-item" *ngFor="let item of items; trackBy: trackBy">
+    <app-tarif-item [item]="item"></app-tarif-item>
+  </li>
+</ul>

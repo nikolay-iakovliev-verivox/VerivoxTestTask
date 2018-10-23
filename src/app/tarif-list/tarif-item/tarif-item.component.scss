@@ -1,0 +1,139 @@
+$primary-color: #000;
+$secondary-color: #fff;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+%tablet-hidden {
+    @media screen and (max-width: $tablet-breakpoint) {
+        display: none !important;
+    }
+}
+
+%mobile-hidden {
+    @media screen and (max-width: $mobile-breakpoint) {
+        display: none !important;
+    }
+}
+
+.tarif-item {
+    display: flex;
+    border: 2px solid $primary-color;
+    margin-bottom: 5px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .tarif-number {
+        padding: 0 5px;
+        border-right: 2px solid $primary-color;
+        @media screen and (max-width: $tablet-breakpoint) {
+            align-items: flex-start;
+            padding: 5px;
+            border: none;
+        }
+    }
+    .tarif-content {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        padding: 10px;
+        .name {
+            font-weight: bold;
+        }
+        .speed {
+            .speed-container:last-child {
+                @extend %mobile-hidden;
+            }
+            .speed-container {
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .speed-label {
+                    font-size: 14px;
+                    @extend %tablet-hidden;
+                }
+                .speed-info {
+                    @extend %mobile-hidden;
+                    .speed-icon {
+                        border: 2px solid $primary-color;
+                        padding: 1px 20px;
+                        @media screen and (max-width: $tablet-breakpoint) {
+                            padding: 1px 10px;
+                        }
+                    }
+                    .speed-content {
+                        border: 1px solid #4e4e4e;
+                        border-top-right-radius: 40%;
+                        border-bottom-right-radius: 40%;
+                        padding: 1px 20px;
+                        min-width: 80px;
+                        @media screen and (max-width: $tablet-breakpoint) {
+                            padding: 1px 10px;
+                        }
+                        @media screen and (max-width: $mobile-breakpoint) {
+                            border: none;
+                            padding: 0;
+                        }
+                    }
+                }
+                .speed-info-min {
+                    display: none;
+                    @media screen and (max-width: $mobile-breakpoint) {
+                        display: grid;
+                        grid-template: auto auto / auto auto;
+                        justify-content: space-between;
+                        .speed-value {
+                            justify-self: right;
+                        }
+                        .row {
+                            grid-column: 1 / -1;
+                        }
+                    }
+                }
+            }
+        }
+        .benefits-container {
+            @extend %tablet-hidden;
+            .benefits {
+                flex-grow: 3;
+                list-style: disc;
+                padding: 0 10px;
+            }
+        }
+        .price-link {
+            @media screen and (max-width: $mobile-breakpoint) {
+                display: flex;
+                justify-content: space-between;
+            }
+            .price {
+                text-align: right;
+                margin: 0 0 15px;
+                font-size: 20px;
+                @media screen and (max-width: $mobile-breakpoint) {
+                    margin: 0 15px 0 0;
+                }
+            }
+            a {
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                border: 2px solid $primary-color;
+                padding: 5px 34px;
+                font-size: 14px;
+                box-shadow: 3px 3px 5px -1px $primary-color;
+                transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+                &:hover {
+                    color: $secondary-color;
+                    background-color: $primary-color;
+                }
+                @media screen and (max-width: $mobile-breakpoint) {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 3px;
+                }
+                .text {
+                    @extend %mobile-hidden;
+                }
+            }
+        }
+    }
+}

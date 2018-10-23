@@ -1,0 +1,6 @@
+<div class="filter-panel">
+  <select [value]="value" (change)="onSortChange($event.target.value)">
+    <option *ngFor="let filter of filters" [value]="filter.value">{{filter.label}}</option>
+  </select>
+  <button (click)="onDirectionChange()">Change direction</button>
+</div>

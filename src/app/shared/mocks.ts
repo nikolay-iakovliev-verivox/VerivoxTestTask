@@ -1,0 +1,42 @@
+export const tarifMockData: Tarif[] = [
+    {
+        id: 1,
+        name: 'Tarif Acro',
+        benefits: ['Tarif Benefit 1', 'Tarif Benefit 2', 'Tarif Benefit 3'],
+        price: 125.45,
+        downloadSpeed: 12,
+        uploadSpeed: 6,
+    },
+    {
+        id: 2,
+        name: 'Tarif Cero',
+        benefits: ['Tarif Benefit 1', 'Tarif Benefit 2', 'Tarif Benefit 3'],
+        price: 113.25,
+        downloadSpeed: 14,
+        uploadSpeed: 3,
+    },
+    {
+        id: 3,
+        name: 'Tarif Bello',
+        benefits: ['Tarif Benefit 1', 'Tarif Benefit 2', 'Tarif Benefit 3'],
+        price: 433.99,
+        downloadSpeed: 11,
+        uploadSpeed: 16,
+    },
+    {
+        id: 4,
+        name: 'Tarif Wello',
+        benefits: ['Tarif Benefit 1', 'Tarif Benefit 2', 'Tarif Benefit 3'],
+        price: 150.25,
+        downloadSpeed: 17,
+        uploadSpeed: 10,
+    },
+    {
+        id: 5,
+        name: 'Tarif Ollo',
+        benefits: ['Tarif Benefit 1', 'Tarif Benefit 2', 'Tarif Benefit 3'],
+        price: 11,
+        downloadSpeed: 19,
+        uploadSpeed: 9,
+    },
+];

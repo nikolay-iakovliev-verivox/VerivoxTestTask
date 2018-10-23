@@ -1,0 +1,40 @@
+<div class="tarif-item">
+  <p class="tarif-number v-center">
+    <span>{{item.id}}</span>
+  </p>
+  <div class="tarif-content">
+    <p class="name">{{item.name}}</p>
+    <div class="speed h-center">
+      <div>
+        <div class="speed-container">
+          <p class="speed-label">Download</p>
+          <div class="speed-info h-center">
+            <div class="speed-icon">&darr;</div>
+            <div class="speed-content">{{item.downloadSpeed}}&nbsp;Mbit/s</div>
+          </div>
+          <div class="speed-info-min">
+            <span>&darr;</span>
+            <span class="speed-value">{{item.downloadSpeed}}</span>
+            <div class="row">Mbit/s</div>
+          </div>
+        </div>
+        <div class="speed-container">
+          <p class="speed-label">Upload</p>
+          <div class="speed-info h-center">
+            <div class="speed-icon">&uarr;</div>
+            <div class="speed-content">{{item.uploadSpeed}}&nbsp;Mbit/s</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="benefits-container h-center">
+      <ul class="benefits">
+        <li *ngFor="let benefit of item.benefits">{{benefit}}</li>
+      </ul>
+    </div>
+    <div class="price-link">
+      <h4 class="price">{{item.price | currency: 'EUR'}}</h4>
+      <a href="#"><span class="text">To Tarif&nbsp;&nbsp;</span>&gt;</a>
+    </div>
+  </div>
+</div>
